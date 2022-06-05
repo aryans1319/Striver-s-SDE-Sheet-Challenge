@@ -12,3 +12,28 @@ vector<int> getPreOrderTraversal(TreeNode *root)
     preOrder(root,ans);
     return ans;
 }
+
+// bfs approach
+
+vector<int> getPreOrderTraversal(TreeNode *root)
+{
+    stack<TreeNode *> st;
+    vector<int>ans;
+    if(root == NULL){
+        return ans;
+    }
+    st.push(root);
+   
+    while(!st.empty()){
+        TreeNode *curr = st.top();
+        ans.push_back(curr->data);
+        st.pop();
+        if(curr->right != NULL){
+            st.push(curr->right);
+        }
+         if(curr->left != NULL){
+            st.push(curr->left);
+        }
+    }
+    return ans;
+}
