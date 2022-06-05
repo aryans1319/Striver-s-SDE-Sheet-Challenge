@@ -14,3 +14,26 @@ vector<int> getInOrderTraversal(TreeNode *root)
     inorderTraversal(root,ans);
     return ans;
 }
+
+
+/* BFS Approach */
+
+vector<int> getInOrderTraversal(TreeNode *root)
+{
+    stack<TreeNode *> st;
+    vector<int>ans;
+    while(true){
+    if(root!= NULL){
+        st.push(root);
+        root = root->left;
+    }
+    else{
+        if(st.empty()) break;
+        root = st.top();
+        ans.push_back(root->data);
+        st.pop();
+        root = root->right;
+    }
+    }
+    return ans;
+}
