@@ -6,5 +6,5 @@ Gonna' be Fun ❤️
 
 | Days  | Problem Solved💯 |
 | ------------- | ------------- |
-| Day 1 | Content Cell  |
+| Day 1 | Preorder, PostOrder, Inorder Traversal of Binary Tree (Iterative + Recursive) |
 | Day 2 | Content Cell  |
